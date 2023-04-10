@@ -13,19 +13,48 @@ html{
     font-size: 62.5%;
 }
 
-header{
+header {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 100vw /*1fr 3fr 1fr*/;
     position: absolute;
     z-index: 1;
 }
 
 header img{
     box-sizing: content-box;
+    margin: 0 auto;
     padding: 2rem;
-    width: 60%;
+    width: 80%;
 }
 
 button.carousel-control-next, button.carousel-control-prev {
     width: 5%;
+}
+
+input.campo-buscar {
+    background-image: url('https://cdn-icons.flaticon.com/svg/3917/3917754.svg?token=exp=1681159033~hmac=f7c136c807505852cdbe01efd432635f');
+    background-size: 5%;
+    background-repeat: no-repeat;
+    background-position: center right 1rem;
+    border-radius: 2rem;
+    border: 1px solid #ffffff;
+    box-shadow: 0 5px 16px -10px #000000 inset, 0 -4px 7px -1px rgba(255, 255, 255, .7);
+    margin: 0 auto;
+    padding: 0.6em 2rem;
+    width: 28rem;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    color: #ffffff;
+}
+
+nav ul li{
+    padding: 1rem;
+    list-style: none;
 }
 
 .carousel-item {
