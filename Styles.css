@@ -42,7 +42,7 @@ input.campo-buscar {
     box-shadow: 0 5px 16px -10px #000000 inset, 0 -4px 7px -1px rgba(255, 255, 255, .7);
     margin: 0 auto;
     padding: 0.6em 2rem;
-    width: 28rem;
+    width: 90%;
 }
 
 /*nav ul {
@@ -86,9 +86,29 @@ nav ul li a{
     text-decoration: none;
 }
 
+nav ul li a:hover{
+    background-color: #1233744d;
+    color: #ffffff;
+}
+
 .carousel-item {
     height: 100vh;
     overflow: hidden;
+}
+
+.carousel-indicators [data-bs-target] {
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    height: 0.5rem;
+    opacity: 1;
+}
+
+.carousel-indicators .active {
+    background: #95c11f;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    opacity: 1;
 }
 
 div.carousel-caption{
@@ -97,7 +117,7 @@ div.carousel-caption{
     bottom: 0;
     border-radius: 1rem 1rem 0 0;
     left: 4%;
-    padding: 2rem 3rem 8rem;
+    padding: 3rem 6rem 8rem;
     text-align: left;
     width: 90%;
 }
@@ -150,115 +170,133 @@ img.w-100{
     margin-bottom: 2rem;
 }
 
-@media (min-width: 425px) {
-    header img {
-        width: 60%;
-    }
-
-    img.abrir-menuHam {
-        width: 30%;
-    }
-
-    .logo-husi {
-        grid-template-columns: 3fr 1fr 0fr;
-    }
-}
-
-@media (min-width: 568px) {
-    .logo-husi {
-        display: inline;
-        margin: 0;
-    }
-    img.abrir-menuHam {
-        display: none;
-    }
-    header {
-        grid-template-columns: 4fr 7fr 1fr;
-    }
-    header img {
-        width: 95%;
-    }
-    nav{
-        grid-area: 1 / 2 / 2 / 4;
-    }
-    nav ul.inactivo {
-        display: block;
-        opacity: 1;
-        text-align: center;
-    }
-    nav ul {
-        background: inherit;
-        height: inherit;
-        padding: 0;
-        position: relative;
-        width: inherit;
-    }
-    nav ul li {
-        display: inline;
-    }
-    input.campo-buscar {
-        grid-area: 2 / 1 / 3 / 4;
-        margin: 15px auto;
-        width: 50rem;
-    }
-
-}
-
-@media (min-width: 768px) {
-    div.carousel-caption {
-        width: 50%;
-    }
-  }
-
-  @media (min-width: 800px) {
-    img.w-100 {
-        width: 100vw !important;
-    }
-
-  }
-
-  @media (min-width: 980px) {
-
-    div.carousel-caption {
-        width: 40%;
-    }
-
-    img.w-100 {
-        height: auto;
-        width: 100% !important;
-    }
-
-    header {
-        grid-template-columns: 2fr 4fr 2fr;
-    }
-
-    input.campo-buscar {
-        grid-area: inherit;
-        width: 28rem;
-    }
-    nav {
-        grid-area: inherit;
-    }
-
-  }
 
 
-  @media (min-width: 1440px) {
-    * {
-        font-size: 2.4rem;
-        line-height: 2.7rem;
-    }
-    
-    div.carousel-caption h5 {
-        font-size: 4.7rem;
+/* ---------- Diseño adaptable ----------*/
+
+    @media (min-width: 320px) {
+        div.carousel-caption {
+            padding: 3rem 4rem 8rem;
+        }
     }
 
-    header img {
-        box-sizing: content-box;
-        padding: 2rem;
-        width: 89%;
+    @media (min-width: 425px) {
+        header img {
+            width: 60%;
+        }
+
+        img.abrir-menuHam {
+            width: 30%;
+        }
+
+        .logo-husi {
+            grid-template-columns: 3fr 1fr 0fr;
+        }
     }
-  }
+
+    @media (min-width: 568px) {
+        .logo-husi {
+            display: inline;
+            margin: 0;
+        }
+        img.abrir-menuHam {
+            display: none;
+        }
+        header {
+            grid-template-columns: 4fr 7fr 1fr;
+        }
+        header img {
+            width: 95%;
+        }
+        nav{
+            grid-area: 1 / 2 / 2 / 4;
+        }
+        nav ul.inactivo {
+            display: block;
+            opacity: 1;
+            text-align: center;
+        }
+        nav ul {
+            background: inherit;
+            height: inherit;
+            padding: 0;
+            position: relative;
+            width: inherit;
+        }
+        nav ul li {
+            border-bottom: inherit;
+            display: inline;
+        }
+        nav ul li a {
+            background: #ffffff;
+            border: 1px solid #ffffff;
+            border-radius: 2rem;
+            box-shadow: 0 5px 16px -10px #000000 inset, 0 -4px 7px -1px rgba(255, 255, 255, .7);
+            margin: -5px;
+            padding: 0.8rem 1.3rem;
+        }
+        input.campo-buscar {
+            grid-area: 2 / 1 / 3 / 4;
+            margin: 15px auto;
+        }
+    }
+
+    @media (min-width: 768px) {
+        div.carousel-caption {
+            width: 50%;
+        }
+    }
+
+    @media (min-width: 980px) {
+
+        div.carousel-caption {
+            width: 40%;
+        }
+        header {
+            grid-template-columns: 2fr 8fr 2fr;
+        }
+
+        input.campo-buscar {
+            grid-area: inherit;
+            margin: 15px 20px;
+        }
+        nav {
+            grid-area: inherit;
+        }
+
+    }
+  
+    @media (min-width: 1024px) {
+        input.campo-buscar {
+            margin: 15px auto;
+        }
+
+        img.w-100 {
+            height: inherit;
+            width: 100% !important;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        * {
+            font-size: 1.5rem;
+            line-height: 1.7rem;
+        }
+        
+        div.carousel-caption h5 {
+            font-size: 3.7rem;
+        }
+
+        header img {
+            box-sizing: content-box;
+            padding: 2rem;
+            width: 89%;
+        }
+        img.w-100 {
+            height: auto;
+            width: 100% !important;
+        }
+    }
 
 
 
