@@ -1,7 +1,9 @@
 const btnMenuHam = document.querySelector('img.abrir-menuHam');
 const menuHam = document.querySelector('nav ul');
+const imageLogo = document.querySelector('img.img-logo');
 
 btnMenuHam.addEventListener('click', abrirMobilMenu);
+imageLogo.addEventListener('click', abrirPrincipalPage);
 
 function abrirMobilMenu(){
     const isAsideClosed = menuHam.classList.contains('inactivo');
@@ -16,4 +18,8 @@ function abrirMobilMenu(){
         btnMenuHam.style.filter = 'invert(0)';
     }
 
+    }
+
+    function abrirPrincipalPage(){
+        window.open("./index.html", "_parent"); 
     }
