@@ -1,0 +1,617 @@
+*{
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Noto Serif', serif;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'amarillo';
+    src: url('./Fuentes/amarillo-webfont.woff2') format('woff2'),
+         url('./Fuentes/amarillo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body{
+    /*background-image: url('./Imagenes/FondoPrincipal.svg');*/
+    background-color: black;
+    /*background-image: url('/documents/78888/671012/fondo.png/58a7abd5-c34d-4b9d-53af-f41885dae5ac?t=1676600987274');*/
+    background-size: contain;
+}
+
+section{
+    background-color: black;
+    display: block;
+    height: 100vh;
+    position: sticky;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+
+section article h1{
+    font-family: 'amarillo';
+    font-size: 2rem;
+    line-height: 4rem;
+}
+
+section article h1 ~ p{
+    font-size: 1.3rem;
+    margin: 10px;
+}
+
+figure img{
+    bottom: -15px;
+    display: block;
+    margin: 0 auto;
+    max-width: 650px;
+    min-width: 480px;
+    position: relative;
+    width: 45%;
+    z-index: 4;
+}
+
+footer{
+    background-color: #2c4f81;
+    display: block;
+    height: 10vh;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+#audio{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2000;
+    margin: 1%;
+}
+
+
+#days ~ p{
+    font-size: 2rem;
+    margin: 10px;
+}
+
+#galeriaValeria{
+    align-items: center;    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 350px;
+    margin: 0 auto;
+    max-width: 1240px;
+    place-content: center;
+}
+
+#galeriaValeria figure img{
+    width: 100%;
+}
+
+.anios{
+    align-items: center;
+    background-image: url('./Imagenes/fondo.png');   
+    background-size: cover; 
+    background-repeat: no-repeat;
+    display: flex;
+    font-size: 3rem;
+    flex-direction: column;
+    justify-content: center;    
+    text-align: center;
+}
+
+.anios h1{
+    font-family: 'amarillo';
+    font-size: 5rem;
+    line-height: 4rem;
+}
+
+.btn_tarjeta{
+    background-color: #2c4f81;
+    font-family: 'Noto Serif', serif;
+    font-size: 1rem;
+    font-style: italic;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.btn_tarjeta:hover{
+    background-color: #d2d2d2;
+    color: #2c4f81;
+}
+
+.confirmarAsistencia{
+    align-items: center;
+    background-image: url('./Imagenes/Fondo1.svg');
+    /*background-image: url('/documents/78888/671012/fondo4.png/5f7bd79f-2e30-d034-7266-c23d262a666f?t=1676601002574');*/
+    background-size: cover;
+    display: flex;
+    font-style: italic;
+    font-size: 2rem;
+    height: 125vh;
+    justify-content: center; 
+}
+
+.confirmarAsistencia article{
+    background-image: url('./Imagenes/Recuadro.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 20% 100px;
+    width: 440px;
+}
+
+.diasFaltan{
+    align-items: center;
+    background-image: url('./Imagenes/Fondo2.svg');
+    /*background-image: url('/documents/78888/671012/fondo3.png/bb5360ab-26b8-cc97-4057-ac6f74a56486?t=1676600999379');*/
+    background-size: cover;
+    display: flex;
+    font-style: italic;
+    font-size: 2rem;
+    justify-content: center;
+}
+
+.diaRecepcionFiesta{
+    align-items: center;
+    background-image: url('./Imagenes/Fondo3.svg');
+    /*background-image: url('/documents/78888/671012/fondo4.png/5f7bd79f-2e30-d034-7266-c23d262a666f?t=1676601002574');*/
+    background-size: cover;
+    display: flex;
+    font-style: italic;
+    font-size: 2rem;
+    justify-content: center; 
+}
+
+.diaRecepcionFiesta article{
+    background-image: url('./Imagenes/Recuadro.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 20% 100px;
+    width: 440px;
+}
+
+.diaFiesta{
+    align-items: center;
+    background-image: url('./Imagenes/FloresCirculo.svg');
+    /*background-image: url('/documents/78888/671012/Circulo.png/cafdec97-72fe-b880-4b2d-6d8e1cdfdcc6?t=1676600982093');*/
+    background-size: cover;
+    display: flex;
+    font-size: 6rem;
+    height: 400px;
+    justify-content: center; 
+    margin: -30px auto;
+    width: 400px;   
+}
+
+.diaFiesta + p{
+    font-size: 1rem;
+}
+
+.fiestaParis{
+    align-items: center;
+    background-image: url('./Imagenes/Fondo1.svg');
+    /*background-image: url('/documents/78888/671012/fondo1.png/1c929d07-7148-6295-fb3a-2ea411e3ab0f?t=1676600992827');*/
+    background-size: cover;
+    display: flex;
+    font-style: italic;
+    font-size: 4rem;
+    justify-content: center;
+    line-height: 4rem;
+}
+
+.fotosFiesta{
+    background-image: url('./Imagenes/Fondo1.svg');
+    /*background-image: url('/documents/78888/671012/fondo1.png/1c929d07-7148-6295-fb3a-2ea411e3ab0f?t=1676600992827');*/
+    background-size: cover;
+    font-style: italic;
+    font-size: 4rem;
+    line-height: 4rem;
+    padding: 5%;
+}
+
+.fotosFiestaG{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.fiestaParis article p:nth-child(2){
+    font-family: 'amarillo';
+    font-size: 2rem;
+    margin: 30px 0 0px;
+    line-height: 4rem;
+    text-align: center;
+}
+
+.regalosFiesta{
+    align-items: center;
+    background-image: url('./Imagenes/Fondo4.svg');
+    /*background-image: url('/documents/78888/671012/fondo4.png/5f7bd79f-2e30-d034-7266-c23d262a666f?t=1676601002574');*/
+    background-size: cover;
+    display: flex;
+    font-style: italic;
+    font-size: 2rem;
+    justify-content: center; 
+}
+
+.regalosFiesta article{
+    background-image: url('./Imagenes/Recuadro.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 20% 100px;
+    width: 440px;
+}
+
+.vestidoFiesta{
+    align-items: center;
+    background-image: url('./Imagenes/Fondo5.svg');
+    /*background-image: url('/documents/78888/671012/fondo4.png/5f7bd79f-2e30-d034-7266-c23d262a666f?t=1676601002574');*/
+    background-size: cover;
+    display: flex;
+    font-style: italic;
+    font-size: 2rem;
+    justify-content: center; 
+}
+
+.vestidoFiesta article{
+    background-image: url('./Imagenes/Recuadro.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 20% 100px;
+    width: 440px;
+}
+
+#ventanaVideo{
+    align-content: center;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 3000;
+}
+
+#ventanaVideo video{
+    width: 80%;
+}
+
+/*Valeria Díaz Beltrán
+
+/documents/78888/671006/Hora.js/533de289-89f1-51e1-e6a5-a6f459ef054d?t=1676600632886
+
+/documents/78888/671009/style.css/00311861-5262-d7d3-95b4-a3a4a189adbb?t=1676600905999
+
+/documents/78888/671012/Circulo.png/cafdec97-72fe-b880-4b2d-6d8e1cdfdcc6?t=1676600982093
+
+/documents/78888/671012/fondo.png/58a7abd5-c34d-4b9d-53af-f41885dae5ac?t=1676600987274
+
+/documents/78888/671012/fondo1.png/1c929d07-7148-6295-fb3a-2ea411e3ab0f?t=1676600992827
+
+/documents/78888/671012/fondo2.png/cee68422-46f5-e669-a7b6-6d21d6208490?t=1676600996382
+
+/documents/78888/671012/fondo3.png/bb5360ab-26b8-cc97-4057-ac6f74a56486?t=1676600999379
+
+/documents/78888/671012/fondo4.png/5f7bd79f-2e30-d034-7266-c23d262a666f?t=1676601002574*/
+
+/*------------------------------------*\
+    MATERIAL PHOTO GALLERY
+\*------------------------------------*/
+
+$gallery-width: 100%;
+$transition-duration: 0.5s;
+
+.m-p-g {
+	max-width: $gallery-width;
+	margin: 0 auto;
+	
+	&__thumbs {
+		
+		&-img {
+			margin: 0;
+			float: left;
+			vertical-align: bottom;
+			cursor: pointer;
+			z-index: 1;
+			position: relative;
+			opacity: 0;
+			filter: brightness(100%);
+			-webkit-tap-highlight-color: rgba(black, 0);
+			will-change: opacity, transform;
+			transition: all $transition-duration cubic-bezier(0.23, 1, 0.32, 1);
+			
+			&.active {
+				z-index: 50;
+			}
+			
+			&.layout-completed {
+				opacity: 1;
+			}
+
+			&.hide {
+				opacity: 0;
+			}
+			
+			&:hover {
+				filter: brightness(110%);
+			}
+		}
+	}
+	
+	&__fullscreen {
+		position: fixed;
+		z-index: 10;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100vh;
+		background: rgba(black, 0);
+		visibility: hidden;
+		transition:
+			background .25s ease-out,
+			visibility .01s $transition-duration linear;
+		will-change: background, visibility;
+		backface-visibility: hidden;
+
+		&.active {
+			transition:
+				background .25s ease-out,
+				visibility .01s 0s linear;
+			visibility: visible;
+			background: rgba(black, 0.95);
+		}
+
+		&-img {
+			pointer-events: none;
+			position: absolute;
+			transform-origin: left top;
+			top: 50%;
+			left: 50%;
+			max-height: 100vh;
+			max-width: 100%;
+			visibility: hidden;
+			will-change: visibility;
+			transition: opacity $transition-duration ease-out;
+
+			&.active {
+				visibility: visible;
+				opacity: 1 !important;
+				transition:
+					transform $transition-duration cubic-bezier(0.23, 1, 0.32, 1),
+					opacity $transition-duration ease-out;
+			}
+
+			&.almost-active {
+				opacity: 0;
+				transform: translate3d(0,0,0) !important;
+			}
+		}
+	}
+	
+	&__controls {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 200;
+		height: 20vh;
+		background: linear-gradient(to top, transparent 0%, rgba(black, 0.55) 100%);
+		opacity: 0;
+		visibility: hidden;
+		transition: all $transition-duration cubic-bezier(0.23, 1, 0.32, 1);
+		
+		&.active {
+			opacity: 1;
+			visibility: visible;
+		}
+		
+		&-close,
+		&-arrow {
+			appearance: none;
+			border: none;
+			background: none;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		&-arrow {
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			width: 20%;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+			-webkit-tap-highlight-color: rgba(black, 0);
+			opacity: 0;
+			
+			&:hover {
+				opacity: 1;
+			}
+			
+			&--prev {
+				left: 0;
+				padding-left: 3vw;
+				justify-content: flex-start;
+			}
+			
+			&--next {
+				right: 0;
+				padding-right: 3vw;
+				justify-content: flex-end;
+			}
+		}
+		
+		&-close {
+			position: absolute;
+			top: 3vh;
+			left: 3vw;
+			z-index: 5;
+			cursor: pointer;
+			-webkit-tap-highlight-color: rgba(black, 0);
+		}
+	}
+
+	&__btn {
+		$size: 50px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: $size;
+		height: $size;
+		border-radius: 50%;
+		background: rgba(white, 0.07);
+		transition: all .25s ease-out;
+
+		&:hover {
+			background: rgba(white, 0.15);
+		}
+	}
+
+	&__alertBox {
+		position: fixed;
+		z-index: 999;
+		max-width: 700px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background: white;
+		padding: 25px;
+		border-radius: 3px;
+		text-align: center;
+		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
+		color: grey;
+
+		h2 {
+			color: red;
+		}
+	}
+}
+
+/* DEMO */
+body {
+	background: #fefefe;
+	color: white;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+	font-family: 'Roboto Mono';
+}
+
+h2 {
+	font-weight: 300;
+	margin: 4vh 4vw;
+	letter-spacing: 3px;
+	color: grey;
+	text-transform: uppercase;
+}
+
+.demo-btn {
+	display: inline-block;
+	margin: 0 2.5px 4vh 2.5px;
+	text-decoration: none;
+	color: grey;
+	padding: 15px;
+	line-height: 1;
+	min-width: 140px;
+	background: rgba(0,0,0, 0.07);
+	border-radius: 6px;
+}
+
+.demo-btn:hover {
+	background: rgba(0,0,0,0.12);
+}
+
+@media (max-width: 640px) {
+
+	.demo-btn {
+		min-width: 0;
+		font-size: 14px;
+	}
+}
+
+
+@media (max-width: 1200px) {
+
+#galeriaValeria {
+     grid-template-rows: 350px;
+ }
+
+ figure img {
+    bottom: 0;
+    min-width: 270px;
+}
+
+#galeriaValeria figure img {
+    width: 30%;
+}
+}
+
+@media (max-width: 900px){
+#galeriaValeria {
+    grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media (max-width: 667px){
+    .anios h1 {
+        font-size: 3rem;
+    }
+    .anios h1 + p {
+        line-height: 43px;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 537px){
+.fiestaParis {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+.fiestaParis article p:nth-child(2) {
+    font-size: 1.3rem;
+    line-height: 3rem;
+}
+}
+
+
+@media (max-width: 425px){
+figure img {
+    min-width: 200px;
+}
+
+#galeriaValeria {
+    grid-template-columns: repeat(1, 0.5fr);
+    grid-template-rows: 80%;
+}
+
+#galeriaValeria figure ~ a{
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+#galeriaValeria figure:nth-child(3){
+    display: none;
+}
+
+#baguetteBox-overlay .full-image {
+    height: 70%;
+}
+}
