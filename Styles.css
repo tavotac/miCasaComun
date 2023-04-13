@@ -1,11 +1,11 @@
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300;1,700&display=swap');
+
+:root{
     --blue-HUSI: #004b99;
     --green: #95c11f;
     --white: #ffffff;
     --black: #000000;
   }
-
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300;1,700&display=swap');
 
 *{
     box-sizing: border-box;
@@ -36,8 +36,6 @@ header img{
     width: 70%;
 }
 
-
-
 section{
     background-color: black;
     display: block;
@@ -50,7 +48,7 @@ section{
 
 section.agua{
     align-items: center;
-    background-image: url('./Imagenes/fondo.png');   
+    /*background-image: url('./Imagenes/fondo.png');   */
     background-size: cover; 
     background-repeat: no-repeat;
     display: flex;
@@ -59,6 +57,15 @@ section.agua{
     justify-content: center;
     overflow: hidden;    
     text-align: center;
+}
+
+section.agua:nth-child(odd) div.internalContent {
+    right: 5vw;
+    left: inherit;
+}
+
+section.agua:nth-child(odd) div.mascara {
+    transform: rotate(180deg);
 }
 
 section.agua h1{
@@ -184,6 +191,24 @@ div.d-none {
     display: block !important;
 }
 
+.gameContent{
+    position: absolute;
+}
+
+.gameContent > div{
+    color: var(--white);
+}
+
+
+.gameContent > div h5 {
+    color: var(--white);
+    font-size: 8rem;
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 1.5rem 0;
+}
+
 img.abrir-menuHam{
     filter: invert(1);
     cursor: pointer;
@@ -202,6 +227,10 @@ img.menuPleglable{
     filter: invert(1);
     padding: 2rem 4rem;
     width: 2.7rem;
+}
+
+img.img-logo{
+    cursor: pointer;
 }
 
 .franja-pie {
@@ -490,7 +519,7 @@ div.internalContent h5 {
         header img {
             box-sizing: content-box;
             padding: 2rem;
-            width: 90%;
+            width: 70%;
         }
 
         header.internal img {
