@@ -192,13 +192,42 @@ div.d-none {
 }
 
 .gameContent{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 17rem;
     position: absolute;
+    text-align: left;
 }
 
 .gameContent > div{
     color: var(--white);
+    padding: 0 15rem;
 }
 
+.gameContent > div .pregunta{
+    color: #04197a;
+    font-size: 3.5rem;
+    font-weight: bold;
+    line-height: 3.5rem;
+    margin: 3rem 0;
+    text-shadow: 0 0 10px var(--white);
+}
+
+.gameContent > div .opcionUno, .opcionDos, .opcionTres{
+    background-color: var(--white);
+    border-bottom: 1px dashed;
+    border-radius: 2rem;
+    color: var(--blue-HUSI);
+    cursor: pointer;
+    padding: 1rem 2rem;
+    transition: all 0.5s linear;
+    text-decoration: none;
+}
+
+.gameContent > div .opcionUno:hover, .opcionDos:hover, .opcionTres:hover{
+    background-color: #1233744d;
+    color: var(--white);
+}
 
 .gameContent > div h5 {
     color: var(--white);
@@ -207,6 +236,16 @@ div.d-none {
     text-transform: uppercase;
     font-weight: 700;
     padding: 1.5rem 0;
+}
+
+.gameContent div.gamePoints{
+    background: var(--white);
+    border-radius: 20rem;
+    color: var(--blue-HUSI);
+    font-size: 12rem;
+    grid-area: 1 / 1 / 2 / 3;
+    justify-self: center;
+    padding: 8rem 5rem;
 }
 
 img.abrir-menuHam{
@@ -259,6 +298,9 @@ img.img-logo{
     width: 100vw;
 }
 
+.respPregunta{
+    position: fixed;
+}
 
 /* ---------- Contenidos internos ----------*/
 

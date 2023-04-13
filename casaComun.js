@@ -7,6 +7,7 @@ const respPregJuegoUno = document.querySelector('.opcionUno');
 const respPregJuegoDos = document.querySelector('.opcionDos');
 const respPregJuegoTres = document.querySelector('.opcionTres');
 const respPregunta = document.querySelector('.respPregunta');
+const gamePoints = document.querySelector('.gamePoints');
 
 btnMenuHam.addEventListener('click', abrirMenuAdaptable);
 imageLogo.addEventListener('click', abrirPrincipalPage);
@@ -15,10 +16,6 @@ respPregJuegoUno.addEventListener('click', () => puntajeJuego(1));
 respPregJuegoDos.addEventListener('click', () => puntajeJuego(2));
 respPregJuegoTres.addEventListener('click', () => puntajeJuego(3));
 
-
-let pregunta = Math.floor(Math.random() * 10);
-let mostrarPregunta = pregunta;
-let respuesta = 0;
 
     function abrirMenuAdaptable(){
         const isAsideClosed = menuHam.classList.contains('inactivo');
@@ -38,8 +35,14 @@ let respuesta = 0;
         window.open("./index.html", "_parent"); 
     }
 
+
     function cargaJuego(){
         
+        let pregunta = Math.floor(Math.random() * 10);
+        let mostrarPregunta = pregunta;
+        let respuesta = 0;
+        console.info(pregunta)
+
         switch(mostrarPregunta){
             case 0:
                 pregJuego.innerText = '¿Que tipo de agua ocupa el 2.5% del planeta y se encuentra en glaciares, lagos y ríos?';
@@ -47,7 +50,7 @@ let respuesta = 0;
                 respPregJuegoDos.innerText = 'Agua dulce';
                 respPregJuegoTres.innerText = 'Agua turbia';
                 respuesta = 2;
-                respPregunta.innerText = respuesta;
+                respPregunta.innerHTML = respuesta;                
             break;
 
             case 1:
@@ -56,7 +59,7 @@ let respuesta = 0;
                 respPregJuegoDos.innerText = 'Agua de enjuague de la ropa';
                 respPregJuegoTres.innerText = 'Ninguna de las anteriores';
                 respuesta = 1;
-                respPregunta.innerText = respuesta;
+                respPregunta.innerHTML = respuesta;                  
             break;
 
             case 2:
@@ -65,7 +68,7 @@ let respuesta = 0;
                 respPregJuegoDos.innerText = 'Aguas subterráneas';
                 respPregJuegoTres.innerText = 'Glaciares';
                 respuesta = 3;
-                respPregunta.innerText = respuesta;
+                respPregunta.innerHTML = respuesta;  
             break;
 
             case 3:
@@ -74,16 +77,16 @@ let respuesta = 0;
                 respPregJuegoDos.innerText = 'Jabones liquidos';
                 respPregJuegoTres.innerText = 'Jabones sólidos';
                 respuesta = 1;
-                respPregunta.innerText = respuesta;
+                respPregunta.innerHTML = respuesta;  
             break;
 
             case 4:
                 pregJuego.innerText = 'Por malas prácticas humanas, la condición en la calidad del agua se ve implicada, afecta la salud humana y al medio ambiente.';
-                respPregJuegoUno.innerText = 'Agua lluvia';
-                respPregJuegoDos.innerText = 'Agua de enjuague de la ropa';
+                respPregJuegoUno.innerText = 'Verdadero';
+                respPregJuegoDos.innerText = 'Falso';
                 respPregJuegoTres.innerText = 'Ninguna de las anteriores';
                 respuesta = 1;
-                respPregunta.innerText = respuesta;
+                respPregunta.innerHTML = respuesta;  
             break;
 
             case 5:
@@ -92,7 +95,7 @@ let respuesta = 0;
                 respPregJuegoDos.innerText = 'Jabones liquidos';
                 respPregJuegoTres.innerText = 'Jabones sólidos';
                 respuesta = 1;
-                respPregunta.innerText = respuesta;
+                respPregunta.innerHTML = respuesta;  
             break;
 
             case 6:
@@ -101,7 +104,7 @@ let respuesta = 0;
                 respPregJuegoDos.innerText = 'Aguas subterráneas';
                 respPregJuegoTres.innerText = 'Glaciares';
                 respuesta = 3;
-                respPregunta.innerText = respuesta;
+                respPregunta.innerHTML = respuesta;  
             break;
 
             case 7:
@@ -110,7 +113,7 @@ let respuesta = 0;
                 respPregJuegoDos.innerText = 'Agua de enjuague de la ropa';
                 respPregJuegoTres.innerText = 'Ninguna de las anteriores';
                 respuesta = 1;
-                respPregunta.innerText = respuesta;
+                respPregunta.innerHTML = respuesta;  
             break;
 
             case 8:
@@ -119,7 +122,7 @@ let respuesta = 0;
                 respPregJuegoDos.innerText = 'Agua dulce';
                 respPregJuegoTres.innerText = 'Agua turbia';
                 respuesta = 2;
-                respPregunta.innerText = respuesta;
+                respPregunta.innerHTML = respuesta;  
             break;
 
             case 9:
@@ -128,7 +131,7 @@ let respuesta = 0;
                 respPregJuegoDos.innerText = 'Agua de enjuague de la ropa';
                 respPregJuegoTres.innerText = 'Ninguna de las anteriores';
                 respuesta = 1;
-                respPregunta.innerText = respuesta;
+                respPregunta.innerHTML = respuesta;
             break;
 
             default:
@@ -137,15 +140,21 @@ let respuesta = 0;
         }
 
     }
+    
 
     function puntajeJuego(opcionSelec){
-        console.info(opcionSelec)
+        console.warn(opcionSelec)
         if(respPregunta.innerHTML === `${opcionSelec}`){
-            console.info('sumar')
+            let suma = parseInt(gamePoints.innerHTML) + parseInt(2);
+            gamePoints.innerText = suma;
+            alert('Excelente, sigue asi');
+            cargaJuego();
         }else{
-            console.info('restar')
+            let resta = parseInt(gamePoints.innerHTML) - parseInt(2);
+            gamePoints.innerText = resta;
+            alert('upps!!!');
+            cargaJuego();    
         }
     }
-
-    cargaJuego();
-    console.info(respPregunta.innerHTML , respuesta)
+    
+    cargaJuego();   
