@@ -143,6 +143,12 @@ a.menuPleglable::before {
     }
 }
 
+.gameContent > div > p.respCorrecta{
+    background: var(--green);
+    color: #185c23;
+    font-weight: bold;
+}
+
 input.campo-buscar {
     background-image: url(https://www.husi.org.co/documents/10180/8336274/usuario.png/77701530-00c3-4091-b307-27fcb63069e3?t=1681363930479);
     background-size: 7.7rem;

@@ -43,7 +43,10 @@ respPregJuegoTres.addEventListener('click', () => puntajeJuego(3));
         let pregunta = Math.floor(Math.random() * 10);
         let mostrarPregunta = pregunta;
         let respuesta = 0;
-        console.info(pregunta)
+
+        respPregJuegoUno.classList.remove('respCorrecta');
+        respPregJuegoDos.classList.remove('respCorrecta');
+        respPregJuegoTres.classList.remove('respCorrecta');
 
         switch(mostrarPregunta){
             case 0:
@@ -145,7 +148,7 @@ respPregJuegoTres.addEventListener('click', () => puntajeJuego(3));
     
 
     function puntajeJuego(opcionSelec){
-        console.warn(opcionSelec)
+
         if(respPregunta.innerHTML === `${opcionSelec}`){
             alert('Excelente, sigue asi');
             anima.classList.add('squirrel-animation');
@@ -154,11 +157,26 @@ respPregJuegoTres.addEventListener('click', () => puntajeJuego(3));
             gamePoints.innerText = suma;
             
         }else{
-            alert('upps!!!');
+            alert('Oops!!!');
             anima.classList.add('squirrel-animationNo');
-            let resta = parseInt(gamePoints.innerHTML) - parseInt(2);
-            gamePoints.innerText = resta;
-            setTimeout(removeAnima, 4000);
+            marcarRespuesta();
+            setTimeout(removeAnima, 4000);            
+            let resta = (gamePoints.innerHTML != 0) ? parseInt(gamePoints.innerHTML) - parseInt(2) : '0';
+            gamePoints.innerText = resta;  
+        }
+    }
+    
+    function marcarRespuesta(){
+        if(respPregunta.innerHTML === '1'){
+            respPregJuegoUno.classList.add('respCorrecta');
+        }
+
+        if(respPregunta.innerHTML === '2'){
+            respPregJuegoDos.classList.add('respCorrecta');
+        }
+
+        if(respPregunta.innerHTML === '3'){
+            respPregJuegoTres.classList.add('respCorrecta');
         }
     }
 
