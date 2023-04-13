@@ -95,17 +95,65 @@ a.menuPleglable::before {
     z-index: -1;
 }
 
-input.campo-buscar {
-    background-image: url('https://www.husi.org.co/documents/10180/8336274/busqueda.svg/045ea132-9d97-4637-a970-72156d5549be');
-    background-size: 1.7rem;
+.squirrel-animation {
+    position: absolute;
+    transform: scale(3.7) rotate(-5deg);
+    bottom: 60vh;
+    left: 47vw;
+    width: 100px;
+    height: 140px;
+    overflow: hidden;
+    animation: squirrelFollow 4s steps(75);
+    background-image: url(https://www.husi.org.co/documents/10180/8336274/P_Si.png/1546ddd2-574a-4998-9527-38d6b7ae540e?t=1681369915770);
     background-repeat: no-repeat;
-    background-position: center right 1rem;
-    border-radius: 2rem;
-    border: 1px solid var(--white);
-    box-shadow: 0 5px 16px -10px var(--black) inset, 0 -4px 7px -1px rgba(255, 255, 255, .7);
-    margin: 0 auto;
-    padding: 0.6em 2rem;
-    width: 85%;
+    background-size: cover;
+}
+
+.squirrel-animationNo {
+    position: absolute;
+    transform: scale(3.7) rotate(-5deg);
+    bottom: 60vh;
+    left: 47vw;
+    width: 100px;
+    height: 140px;
+    overflow: hidden;
+    animation: squirrelFollowNo 4s steps(75);
+    background-image: url(https://www.husi.org.co/documents/10180/8336274/P_No.png/a89707c4-acc9-4631-9533-4443c22e4539?t=1681370329553);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@keyframes squirrelFollow {
+    from {
+        background-position: 0
+    }
+
+    to {
+        background-position: -7500px
+    }
+}
+
+@keyframes squirrelFollowNo {
+    from {
+        background-position: 0
+    }
+
+    to {
+        background-position: -7500px
+    }
+}
+
+input.campo-buscar {
+    background-image: url(https://www.husi.org.co/documents/10180/8336274/usuario.png/77701530-00c3-4091-b307-27fcb63069e3?t=1681363930479);
+    background-size: 7.7rem;
+    background-repeat: no-repeat;
+    background-position: center 0rem;
+    background-color: transparent;
+    border-radius: 20rem;
+    border: inherit;
+    box-shadow: 0 0 44px -12px;
+    padding: 4.6em 0 0;
+    width: 9rem;
 }
 
 ul, ol{

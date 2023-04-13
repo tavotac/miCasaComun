@@ -8,6 +8,7 @@ const respPregJuegoDos = document.querySelector('.opcionDos');
 const respPregJuegoTres = document.querySelector('.opcionTres');
 const respPregunta = document.querySelector('.respPregunta');
 const gamePoints = document.querySelector('.gamePoints');
+const anima = document.querySelector('.anima');
 
 btnMenuHam.addEventListener('click', abrirMenuAdaptable);
 imageLogo.addEventListener('click', abrirPrincipalPage);
@@ -15,6 +16,7 @@ imageLogo.addEventListener('click', abrirPrincipalPage);
 respPregJuegoUno.addEventListener('click', () => puntajeJuego(1));
 respPregJuegoDos.addEventListener('click', () => puntajeJuego(2));
 respPregJuegoTres.addEventListener('click', () => puntajeJuego(3));
+
 
 
     function abrirMenuAdaptable(){
@@ -145,16 +147,26 @@ respPregJuegoTres.addEventListener('click', () => puntajeJuego(3));
     function puntajeJuego(opcionSelec){
         console.warn(opcionSelec)
         if(respPregunta.innerHTML === `${opcionSelec}`){
+            alert('Excelente, sigue asi');
+            anima.classList.add('squirrel-animation');
+            setTimeout(removeAnima, 4000);
             let suma = parseInt(gamePoints.innerHTML) + parseInt(2);
             gamePoints.innerText = suma;
-            alert('Excelente, sigue asi');
-            cargaJuego();
+            
         }else{
+            alert('upps!!!');
+            anima.classList.add('squirrel-animationNo');
             let resta = parseInt(gamePoints.innerHTML) - parseInt(2);
             gamePoints.innerText = resta;
-            alert('upps!!!');
-            cargaJuego();    
+            setTimeout(removeAnima, 4000);
         }
     }
-    
-    cargaJuego();   
+
+    function removeAnima(){
+        anima.classList.remove('squirrel-animation');
+        anima.classList.remove('squirrel-animationNo');
+        cargaJuego();
+      }
+
+    cargaJuego();
+  
