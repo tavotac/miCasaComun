@@ -44,9 +44,9 @@ respPregJuegoTres.addEventListener('click', () => puntajeJuego(3));
         let mostrarPregunta = pregunta;
         let respuesta = 0;
 
-        respPregJuegoUno.classList.remove('respCorrecta');
-        respPregJuegoDos.classList.remove('respCorrecta');
-        respPregJuegoTres.classList.remove('respCorrecta');
+        respPregJuegoUno.classList.remove('respCorrecta', 'respMarcada');
+        respPregJuegoDos.classList.remove('respCorrecta', 'respMarcada');
+        respPregJuegoTres.classList.remove('respCorrecta', 'respMarcada');
 
         switch(mostrarPregunta){
             case 0:
@@ -149,15 +149,28 @@ respPregJuegoTres.addEventListener('click', () => puntajeJuego(3));
 
     function puntajeJuego(opcionSelec){
 
+        if(`${opcionSelec}` === '1'){
+            respPregJuegoUno.classList.add('respMarcada')
+        }
+
+        if(`${opcionSelec}` === '2'){
+            respPregJuegoDos.classList.add('respMarcada')
+        }
+
+        if(`${opcionSelec}` === '3'){
+            respPregJuegoTres.classList.add('respMarcada')
+        }
+
         if(respPregunta.innerHTML === `${opcionSelec}`){
-            alert('Excelente, sigue asi');
+            //alert('Excelente, sigue asi');
             anima.classList.add('squirrel-animation');
+            marcarRespuesta();
             setTimeout(removeAnima, 4000);
             let suma = parseInt(gamePoints.innerHTML) + parseInt(2);
             gamePoints.innerText = suma;
             
         }else{
-            alert('Oops!!!');
+            //alert('Oops!!!');
             anima.classList.add('squirrel-animationNo');
             marcarRespuesta();
             setTimeout(removeAnima, 4000);            
