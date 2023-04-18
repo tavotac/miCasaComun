@@ -81,7 +81,7 @@ a.menuPleglable{
     position: relative;
 }
 
-a.menuPleglable::before {
+/*a.menuPleglable::before {
     border-radius: 22px;
     content: 'V';
     color: var(--white);
@@ -92,7 +92,7 @@ a.menuPleglable::before {
     position: absolute;
     top: 28px;
     z-index: -1;
-}
+}*/
 
 .squirrel-animation {
     position: absolute;
@@ -153,16 +153,17 @@ a.menuPleglable::before {
 }
 
 input.campo-buscar {
-    background-image: url(https://www.husi.org.co/documents/10180/8336274/usuario.png/77701530-00c3-4091-b307-27fcb63069e3?t=1681363930479);
+    /*background-image: url(https://www.husi.org.co/documents/10180/8336274/usuario.png/77701530-00c3-4091-b307-27fcb63069e3?t=1681363930479);*/
     background-size: 7.7rem;
     background-repeat: no-repeat;
     background-position: center 0rem;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 20rem;
     border: inherit;
-    box-shadow: 0 0 44px -12px;
-    padding: 4.6em 0 0;
-    width: 9rem;
+    box-shadow: 0 0 8px -2px;
+    padding: 1rem;
+    width: 17rem;
+    text-align: center;
 }
 
 ul, ol{
@@ -249,7 +250,7 @@ div.carousel-caption p::first-line{
 div.carousel-indicators {
     /*bottom: 50vh;*/
     justify-content: end;
-    z-index: 3;
+    z-index: 2;
 }
 
 div.d-none {
@@ -582,6 +583,7 @@ div.internalContent h5 {
         nav.principalNav > ul li a{
             text-decoration: none;
             display: block;
+            font-weight: 600;
             padding: 1rem;
         }
 
@@ -654,6 +656,11 @@ div.internalContent h5 {
             width: inherit;
         }
 
+        nav.principalNav > ul li a{
+            font-weight: 500;
+            font-size: 1.7rem;
+        }
+
         nav.principalNav > ul li ul.submenu li{
             border-bottom: none;
         }
@@ -698,10 +705,10 @@ div.internalContent h5 {
         }
         
         nav ul.submenu{
-            border-radius: 1rem;
+            /*border-radius: 1rem;*/
             display: none;
             margin: 0;
-            min-width: 16rem;
+            min-width: 17rem;
             overflow: hidden;
             padding: 0;
             position: absolute;
@@ -735,14 +742,14 @@ div.internalContent h5 {
         }
 
         nav > ul > li > a{
-            background-color: var(--white);
-            border: 1px solid #ffffff;
-            border-radius: 2rem;
-            box-shadow: 0 5px 16px -10px #000000 inset, 0 -4px 7px -1px rgba(255, 255, 255, .7);
-            color: var(--blue-HUSI);
+            /*background-color: var(--white);*/
+            /*border: 1px solid #ffffff;*/
+            /*border-radius: 2rem;*/
+            /*box-shadow: 0 5px 16px -10px #000000 inset, 0 -4px 7px -1px rgba(255, 255, 255, .7);*/
+            color: var(--white);
             display: block;
-            margin: 15px 10px;
-            padding: 0.8rem 2rem;;
+            margin: 0;
+            padding: 3rem !important;
             transition: all 0.5s linear;
             text-decoration: none;
         }
@@ -765,6 +772,10 @@ div.internalContent h5 {
     }
 
     @media (min-width: 980px) {
+        nav ul.submenu {
+            min-width: 21rem;
+        }
+
         section.agua > video{
             width: 120vw;
             position: absolute;
@@ -797,6 +808,11 @@ div.internalContent h5 {
         /*div.internalContent h5 {
             font-size: 4rem;
         }*/
+
+        nav > ul > li > a{
+            padding: 5rem !important;
+        }
+
 
     }
   

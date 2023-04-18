@@ -24,7 +24,7 @@ respPregJuegoTres.addEventListener('click', () => puntajeJuego(3));
 otraSopa.addEventListener('click', nuevaSopa);
 
 
-var words = ['Agua','Glaciares','Contaminar','Lagos','Lluvia','Dulce'];
+var words = ['agua','glaciares','contaminar','lagos','lluvia','dulce'];
 var gamePuzzle = wordfindgame.create(words, '#juego', '#Palabras');
 var puzzle = wordfind.newPuzzle(words,{height: 18, width:18, fillBlanks: false});  
 $('#solve').click( function() {wordfindgame.solve(gamePuzzle, words);});
