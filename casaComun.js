@@ -9,6 +9,10 @@ const respPregJuegoTres = document.querySelector('.opcionTres');
 const respPregunta = document.querySelector('.respPregunta');
 const gamePoints = document.querySelector('.gamePoints');
 const anima = document.querySelector('.anima');
+const resolverSopa = document.querySelector('#solve') 
+const otraSopa = document.querySelector('#nuevoSop') 
+
+
 
 btnMenuHam.addEventListener('click', abrirMenuAdaptable);
 imageLogo.addEventListener('click', abrirPrincipalPage);
@@ -17,6 +21,14 @@ respPregJuegoUno.addEventListener('click', () => puntajeJuego(1));
 respPregJuegoDos.addEventListener('click', () => puntajeJuego(2));
 respPregJuegoTres.addEventListener('click', () => puntajeJuego(3));
 
+otraSopa.addEventListener('click', nuevaSopa);
+
+
+var words = ['Agua','Glaciares','Contaminar','Lagos','Lluvia','Dulce'];
+var gamePuzzle = wordfindgame.create(words, '#juego', '#Palabras');
+var puzzle = wordfind.newPuzzle(words,{height: 18, width:18, fillBlanks: false});  
+$('#solve').click( function() {wordfindgame.solve(gamePuzzle, words);});
+/*wordfind.print(puzzle);  */
 
 
     function abrirMenuAdaptable(){
@@ -198,6 +210,10 @@ respPregJuegoTres.addEventListener('click', () => puntajeJuego(3));
         anima.classList.remove('squirrel-animationNo');
         cargaJuego();
       }
+      
+
+    function nuevaSopa(){    
+        var gamePuzzle = wordfindgame.create(words, '#juego', '#Palabras');
+    }
 
     cargaJuego();
-  
